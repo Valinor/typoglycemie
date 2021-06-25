@@ -8,5 +8,7 @@ La première et dernière lettre ne sont pas suffisantes dans certains cas.
 
 Exemple :
 
+    python3 typoglycemie.py sample.txt
+
 ccei est puor tteesr la torihee de la tiplimgoeyce et cpnmderroe comenmt un biias peut etre iiruntodt dnas ce gnree dtee'ud
 ccei est puor tsteer la thieore de la télycpomigie et crmdrpeone cemnomt un baiis puet erte idnoutrit dnas ce grnee deetud'
