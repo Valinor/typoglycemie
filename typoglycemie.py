@@ -1,5 +1,6 @@
 import sys
 import random
+import codecs
 
 def randomize(word,change_number=50):
     word_array=list(word[1:-1])
@@ -13,18 +14,11 @@ def randomize(word,change_number=50):
     return word[0]+"".join(word_array)+word[-1]
 
 def typoglycemie(data):
-    data=data.split(" ")
-    result=[]
-    for word in data:
-        if len(word)<4:
-            result.append(word)
-        else:
-            result.append(randomize(word))
+    result = [word if len(word)<4 else randomize(word) for word in data.split(" ")]
     return " ".join(result)
 
 if __name__ == '__main__':
     if len(sys.argv)>1:
-        with open(sys.argv[1]) as f:
-            result=f.readlines()
-            for phrase in result:
-                print typoglycemie(phrase)
+        with codecs.open(sys.argv[1],encoding="utf-8") as reading_file:
+            for phrase in reading_file.readlines():
+                print(typoglycemie(phrase[:-1]))
