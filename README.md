@@ -1,6 +1,9 @@
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=Valinor_typoglycemie&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=Valinor_typoglycemie)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=Valinor_typoglycemie&metric=security_rating)](https://sonarcloud.io/dashboard?id=Valinor_typoglycemie)
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Valinor_typoglycemie&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Valinor_typoglycemie)
+![Licence](https://img.shields.io/github/license/valinor/typoglycemie)
+
+
 
 # typoglycemie
 typoglycemie
