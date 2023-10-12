@@ -22,7 +22,7 @@ def typoglycemie(data):
 
 def main(argv):
     try:
-        with codecs.open(sys.argv[1], encoding="utf-8") as reading_file:
+        with codecs.open(argv[1], encoding="utf-8") as reading_file:
             for phrase in reading_file.readlines():
                 print(typoglycemie(phrase[:-1]))
     except IndexError:
