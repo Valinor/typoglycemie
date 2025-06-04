@@ -17,5 +17,11 @@ Exemple :
 
     python3 typoglycemie.py sample.txt
 
+ou
+
+    docker run --rm -v "%cd%:/data" typoglycemie:latest /data/sample.txt
+
+    docker run --rm -v $(pwd):/data typoglycemie:latest /data/sample.txt
+
 ccei est puor tteesr la torihee de la tiplimgoeyce et cpnmderroe comenmt un biias peut etre iiruntodt dnas ce gnree dtee'ud
 ccei est puor tsteer la thieore de la télycpomigie et crmdrpeone cemnomt un baiis puet erte idnoutrit dnas ce grnee deetud'
