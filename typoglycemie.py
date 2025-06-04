@@ -1,23 +1,23 @@
 import sys
 import random
 import codecs
+import re
 
+pattern = r'\s+|\w+|[^\w\s]'
 
 def randomize(word, change_number=50):
-    word_array = list(word[1:-1])
+    word_array = list(word)
     size = len(word_array)
     for _ in range(change_number):
-        first_letter = random.randrange(0, size)
-        second_letter = random.randrange(0, size)
-        mem = word_array[first_letter]
-        word_array[first_letter] = word_array[second_letter]
-        word_array[second_letter] = mem
-    return word[0] + "".join(word_array) + word[-1]
+        first_letter = random.randrange(1, size-1)
+        second_letter = random.randrange(1, size-1)
+        word_array[first_letter], word_array[second_letter]= word_array[second_letter],word_array[first_letter]
+    return "".join(word_array)
 
 
 def typoglycemie(data):
-    result = [word if len(word) < 4 else randomize(word) for word in data.split(" ")]
-    return " ".join(result)
+    result = [word if len(word) < 4 else randomize(word) for word in re.findall(pattern, data)]
+    return "".join(result)
 
 
 def main(argv):
